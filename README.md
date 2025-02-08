@@ -27,7 +27,7 @@ B3LOWUPABO73
 
 clone the repo
    ```
-   git clone <repository-url>
+   git clone https://github.com/softwavegroup/JohnWayneCAS.git
 
 ```
 python3 run.py
