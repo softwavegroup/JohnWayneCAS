@@ -1,0 +1,17 @@
+/inventory_management
+    /app
+        __init__.py
+        /blueprints
+            __init__.py
+            inventory.py
+            reports.py
+        /templates
+            inventory.html
+            report.html
+        /static
+            /css
+                style.css
+        models.py
+        views.py
+        forms.py
+    run.py

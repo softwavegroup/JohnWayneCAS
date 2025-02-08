@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+</head>
+<body>
+    <h1>Inventory Management</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label for="upc">UPC:</label>
+        {{ form.upc }}
+        <label for="units">Units:</label>
+        {{ form.units }}
+        <label for="price">Price:</label>
+        {{ form.price }}
+        <label for="url">URL:</label>
+        {{ form.url }}
+        <label for="images">Image URL:</label>
+        {{ form.images }}
+        <label for="r">R:</label>
+        {{ form.r }}
+        <button type="submit">Add Item</button>
+    </form>
+
+    <h2>Inventory List</h2>
+    <ul>
+        {% for item in items %}
+            <li>UPC: {{ item.upc }} - {{ item.units }} units - ${{ item.price }} 
+                <a href="{{ url_for('inventory.remove', id=item.id) }}">Remove</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
